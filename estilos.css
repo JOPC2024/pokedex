@@ -1,0 +1,306 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+.fondo{
+    background-image: url('assets/img/pokemon2.jpg');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 1800px;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+}
+header{
+    width: 100%;
+    background-color: #DF1136 ;
+    box-shadow: 10px 5px 10px #111010;
+    position: fixed;
+    z-index:2;
+    
+}
+.logo{
+    font-family: "PokemonSolid";
+    color:#FFCB05;
+    font-size: 50px;
+    -webkit-text-stroke: 3px #21386E;
+    padding: 10px 0px 10px 50px;
+    width: 200px;
+    cursor: pointer;
+    text-shadow: 10px 10px 20px black;
+
+}
+.logo:hover{
+    transform: rotate(-10deg);
+}
+main{
+    width: 100%;
+    height: 1700px;
+    display: flex;
+    flex-direction: column;
+}
+.contenedorBuscador{
+    width: 100%;
+    height: 300px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.buscador{
+    width: 50px;
+    height: 50px;
+    border:1px solid black;
+    transition: width 2s;
+    display:flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 30px;
+    position: fixed;
+    
+}
+.buscador:hover{
+    width: 300px;
+}
+.buscadorIzq{
+    width: 25px;
+    height: 50px;
+    background-color: #DF1136;
+    border-radius: 25px 0px 0px 25px;
+    border:1px solid black;
+}
+.busqueda > input{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-left: -25px;
+    border-radius: 25px;
+    z-index:1;
+    text-align: center;
+    outline:none;
+    border:0;
+    background-color: transparent;
+}
+.busqueda > input:hover{
+    margin-left: -150px;
+    width: 300px;
+}
+
+.buscadorDer{
+    width: 25px;
+    height: 50px;
+    background-color:#F7F7F7;
+    border-radius: 0px 25px 25px 0px;
+    border:1px;
+    border-left-width: 5px;
+    border-color: black;
+    border-style: solid;
+    display:flex;
+    align-items: center;
+}
+.icoBuscador{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 15px;
+    position: absolute;
+    z-index:1;
+    margin-left: -12px;
+    border:2px solid black;
+    background-image: url('assets/img/lupa.png');
+    background-size: cover;
+    cursor: pointer;
+
+}
+.contenedorCards{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+
+}
+.cards{
+    height: 200px;
+    text-align: center;
+    border:1px solid grey;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 10px 5px 10px #111010;
+    cursor: pointer;
+}
+.cards > img{
+    width: 100%;
+    height: 65%;
+}
+.cards:active{
+    transform: scale(0.9);
+}
+.mascota1{
+    background-image: url('assets/img/pikachu.png');
+    background-size: contain;
+    right: 10px;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+.mascota1 > label{
+    visibility: hidden;
+}
+.mascota2{
+    background-image: url('assets/img/squirtle.png');
+    background-size: contain;
+    left: 10px;
+    position: absolute;
+    width: 90px;
+    height: 110px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+.mascota2 > label{
+    visibility: hidden;
+}
+.flechas{
+    margin: 2px solid black;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flechas > div{
+    display:flex;
+    flex-direction: row;
+    width: 150px;
+    height: 50px;
+}
+.flechaIzq{
+    background-image: url('assets/img/flechaIzq.png');
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border: #DF1136;
+    cursor: pointer;
+}
+.flechaIzq:active{
+    transform: scale(0.9);
+}
+.numPag{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color:white;
+    -webkit-text-stroke: 2px #21386E;
+}
+.flechaDer{
+    background-image: url('assets/img/flechaDer.png');
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.flechaDer:active{
+    transform: scale(0.9);
+}
+footer{
+    background-color: white;
+    height: 30px;
+    box-shadow: 0px 10px 100px black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:70px;
+}
+footer > p{
+    color: grey;
+}
+@font-face {
+    font-family: 'PokemonSolid';
+    src: url(assets/fonts/pokemonsolid.ttf);
+}
+/*Efecto*/
+.modalmask {
+    position: fixed;
+    font-family: Arial, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalmask:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+/*Formato de la ventana*/
+.modalbox{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    padding: 5px 20px 13px 20px;
+    background: #fff;
+    border-radius:3px;
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+     
+}
+
+/*Movimientos*/
+.movedown {
+    margin: 0 auto;
+}
+
+.resize {
+    margin: 10% auto;
+    width:0;
+    height:0;
+ 
+}
+.modalmask:target .movedown{       
+    margin:10% auto;
+}
+.modalmask:target .rotate{     
+    transform: rotate(360deg) scale(1,1);
+    -webkit-transform: rotate(360deg) scale(1,1);
+}
+ 
+.modalmask:target .resize{
+    width:400px;
+    height:200px;
+}
+
+/*Boton de cerrar*/
+.close {
+    background: #21386E;
+    color: #FFCB05;
+    line-height: 25px;
+    position: absolute;
+    right: 1px;
+    text-align: center;
+    top: 1px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius:3px;
+    font-family: 'PokemonSolid';
+ 
+}
+ 
+.close:hover {
+    background: #DF1136;
+}
