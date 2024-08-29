@@ -36,7 +36,7 @@ class Pokedex{
             `;
         })
         .catch(error => {
-            contenidoModal.innerHTML = `${error.message}<img src='assets/img/pokemonError.png' width='200' height='100'/>`;
+            contenidoModal.innerHTML = `<p>${error.message}</p><img src='assets/img/pokemonError.png' width='200' height='100'/>`;
         })
     }
       
