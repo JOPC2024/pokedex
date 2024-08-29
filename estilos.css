@@ -139,6 +139,10 @@ main{
 .cards:active{
     transform: scale(0.9);
 }
+.cards:hover{
+    filter: saturate(2);
+    transform: scale(1.10);
+}
 .mascota1{
     background-image: url('assets/img/pikachu.png');
     background-size: contain;
@@ -248,8 +252,8 @@ footer > p{
 
 /*Formato de la ventana*/
 .modalbox{
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     position: relative;
     padding: 5px 20px 13px 20px;
     background: #fff;
@@ -303,4 +307,23 @@ footer > p{
  
 .close:hover {
     background: #DF1136;
+}
+.contenidoModal{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter:saturate(2);
+
+}
+.contenidoModal > h1{
+    margin-top: 20px;
+    font-size: 50px;
+}
+.contenidoModal > p{
+    font-size: 20px;
+}
+.contenidoModal > img{
+    width: 400px;
+    height: 200px;
 }

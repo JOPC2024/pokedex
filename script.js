@@ -21,9 +21,17 @@ class Pokedex{
             return res.json();
         })
         .then((pokemon) => {
+            let habilidades = [];
+            for(let habilidad of pokemon.abilities){habilidades.push(habilidad.ability.name)}
+            let tipos = [];
+            for(let tipo of pokemon.types){tipos.push(tipo.type.name)}
             contenidoModal.innerHTML = `
-            <h2>${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h2>
-            <p>Weigth: ${pokemon.weight}</p>
+            <h1>${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h1>
+            <p>Peso: ${pokemon.weight}</p>
+            <p>Habilidades:</p>
+            <p>${habilidades.join()}</p>
+            <p>Tipo:</p>
+            <p>${tipos.join()}</p>
             <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
             `;
         })
@@ -52,7 +60,7 @@ class Pokedex{
                     datosHTML += `
                     <div title="${data.name}" class="cards">
                         <h1>${data.name}</h1>
-                        <p>${data.weight}</p>
+                        <p>Peso: ${data.weight}</p>
                         <img src="${data.sprites.front_default}" alt="${data.name}" />
                     </div>
                     `;

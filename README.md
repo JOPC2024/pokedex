@@ -1,7 +1,7 @@
 # Pokedex
-**Descripcion**
+**Descripción**
 
-A partir del api de [PokeApi](https://pokeapi.co/api/v2/)
+A partir del api de [PokeApi](https://pokeapi.co/)
 
 Crea un pokédex, es decir una página web donde puedas consultar pokemones, y leer información sobre cada pokemon que se muestre.
 La página web debe:
@@ -23,3 +23,35 @@ Cosas a tener en cuenta:
 - EcmaScript 6
 
 - Repo en Github (Github pages es un plus)
+
+
+```mermaid
+---
+title: Pokedex
+---
+classDiagram
+    class Pokedex{
+        -contenidoModal DOM Objet
+        -consultarPokemones(pokemon, inicio) Promise
+        +mostrarPokemonEnModal(pokemon) void
+        +mostrarPokemonesEnViewPort(inicio) void
+    }
+
+    class InterfaceUsuario{
+        -__listaCaracteres Array
+        -limpiarDatosBuscar(dato) String
+        +buscar(dato) void
+    }
+    
+block-beta
+  columns 3
+  a:3
+  block:group1:2
+    columns 2
+    h i j k
+  end
+  g
+  block:group2:3
+    %% columns auto (default)
+    l m n o p q r
+  end
